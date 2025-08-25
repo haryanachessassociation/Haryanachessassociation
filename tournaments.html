@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haryana Chess Association - Tournament Calendar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header header-white">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/home/logo_hca.png" alt="Haryana Chess Association Logo">
+                </a>
+                <div class="logo-text">The Haryana Chess Association</div>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="tournaments.html" class="nav-link active">Tournament Calendar</a></li>
+                    <li class="nav-item"><a href="affiliated.html" class="nav-link">Affiliated Bodies</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">More <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="results.html">Results & Certificates</a></li>
+                            <li><a href="mission.html">HCA Mission</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="tournament-hero">
+        <div class="container">
+            <h1 class="tournament-title">TOURNAMENT CALENDAR</h1>
+        </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="filter-bar">
+        <div class="container">
+            <div class="filter-controls">
+                <div class="filter-dropdown">
+                    <img src="assets/tournaments/icon_calendar.png" alt="Calendar Icon" class="filter-icon">
+                    <select name="year" id="year-filter">
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                    </select>
+                </div>
+                <div class="filter-dropdown">
+                    <img src="assets/tournaments/icon_calendar.png" alt="Calendar Icon" class="filter-icon">
+                    <select name="month" id="month-filter">
+                        <option value="all">Months</option>
+                        <option value="january">January</option>
+                        <option value="february">February</option>
+                        <option value="march">March</option>
+                        <option value="april">April</option>
+                        <option value="may">May</option>
+                        <option value="june">June</option>
+                        <option value="july">July</option>
+                        <option value="august">August</option>
+                        <option value="september">September</option>
+                        <option value="october">October</option>
+                        <option value="november">November</option>
+                        <option value="december">December</option>
+                    </select>
+                </div>
+                <div class="filter-dropdown">
+                    <img src="assets/tournaments/icon_category.png" alt="Category Icon" class="filter-icon">
+                    <select name="category" id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="open">Open</option>
+                        <option value="women">Women</option>
+                        <option value="u7">Under 7</option>
+                        <option value="u9">Under 9</option>
+                        <option value="u11">Under 11</option>
+                        <option value="u13">Under 13</option>
+                        <option value="u15">Under 15</option>
+                        <option value="u17">Under 17</option>
+                        <option value="u19">Under 19</option>
+                    </select>
+                </div>
+                <div class="filter-dropdown">
+                    <img src="assets/tournaments/icon_location.png" alt="Location Icon" class="filter-icon">
+                    <select name="location" id="location-filter">
+                        <option value="all">All Locations</option>
+                        <!--<option value="gurugram">Gurugram</option>
+                        <option value="karnal">Karnal</option>
+                        <option value="jhajjar">Jhajjar</option>
+                        <option value="faridabad">Faridabad</option>
+                        <option value="sonipat">Sonipat</option>-->
+                        <option value="ambala">Ambala</option>
+                        <option value="bhiwani">Bhiwani</option>
+                        <option value="charkhi-dadri">Charkhi Dadri</option>
+                        <option value="faridabad">Faridabad</option>
+                        <option value="fatehabad">Fatehabad</option>
+                        <option value="gurugram">Gurugram</option>
+                        <option value="hisar">Hisar</option>
+                        <option value="jhajjar">Jhajjar</option>
+                        <option value="jind">Jind</option>
+                        <option value="kaithal">Kaithal</option>
+                        <option value="karnal">Karnal</option>
+                        <option value="kurukshetra">Kurukshetra</option>
+                        <option value="mahendragarh">Mahendragarh</option>
+                        <option value="nuh">Nuh</option>
+                        <option value="palwal">Palwal</option>
+                        <option value="panchkula">Panchkula</option>
+                        <option value="panipat">Panipat</option>
+                        <option value="rewari">Rewari</option>
+                        <option value="rohtak">Rohtak</option>
+                        <option value="sirsa">Sirsa</option>
+                        <option value="sonipat">Sonipat</option>
+                        <option value="yamuna-nagar">Yamuna Nagar</option>
+
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournaments Listing Section -->
+    <section class="tournaments-listing">
+        <div class="container">
+            <h2 class="tournaments-heading">Tournaments</h2>
+            
+            <div class="tournament-cards">
+                <!-- Tournament Card 1 - August (Latest) -->
+                <div class="tournament-card" data-category="open women" data-location="karnal" data-month="august" data-year="2025">
+                    <div class="tournament-date">
+                        <span class="date-number">2-3</span>
+                        <span class="date-month">Aug</span>
+                    </div>
+                    <div class="tournament-details">
+                        <h3 class="tournament-name">39th Haryana State Open and Women Chess Championship</h3>
+                        <div class="tournament-info">
+                            <div class="info-item">
+                                <img src="assets/tournaments/icon_location.png" alt="Location" class="info-icon">
+                                <span>Karnal</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="assets/tournaments/icon_calendar.png" alt="Calendar" class="info-icon">
+                                <span>Aug 2-3, 2025</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="assets/tournaments/icon_category.png" alt="Category" class="info-icon">
+                                <span>Open and Women</span>
+                            </div>
+                        </div>
+                        <div class="tournament-actions">
+                            <div class="action-buttons">
+                                <a href="https://forms.gle/Y9UEsJyF5DFBZbji9" class="btn btn-primary" target="_blank">Register</a>
+                                <a href="https://drive.google.com/file/d/1apCkRqO_QMyB61Q24jN2UfbPRAQxvU3z/view?usp=drive_link" class="btn btn-secondary" target="_blank">Details</a>
+                            </div>
+                            <div class="registration-status">
+                                <span class="status-badge">Registration Closed</span>
+                                <span class="closing-date">Closes: Aug 1, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tournament Card 2 - June 28-29 -->
+                <div class="tournament-card" data-category="open" data-location="karnal" data-month="june" data-year="2025">
+                    <div class="tournament-date">
+                        <span class="date-number">28-29</span>
+                        <span class="date-month">June</span>
+                    </div>
+                    <div class="tournament-details">
+                        <h3 class="tournament-name">29th Haryana State Chess Championship</h3>
+                        <div class="tournament-info">
+                            <div class="info-item">
+                                <img src="assets/tournaments/icon_location.png" alt="Location" class="info-icon">
+                                <span>Jhajjar</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="assets/tournaments/icon_calendar.png" alt="Calendar" class="info-icon">
+                                <span>June 28-29, 2025</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="assets/tournaments/icon_category.png" alt="Category" class="info-icon">
+                                <span>U-11 and U-17</span>
+                            </div>
+                        </div>
+                        <div class="tournament-actions">
+                            <div class="action-buttons">
+                                <a href="https://forms.gle/ajTvaLfZ6TJwE3hYA" class="btn btn-primary" target="_blank">Register</a>
+                                <a href="https://drive.google.com/file/d/1QkoyzdrSa1ktcoJFWtivg4RRoSEWMUSc/view?usp=drive_link" class="btn btn-secondary" target="_blank">Details</a>
+                            </div>
+                            <div class="registration-status">
+                                <span class="status-badge">Registration Closed</span>
+                                <span class="closing-date">Closes: June 27, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tournament Card 3 - June 15-21 -->
+                <div class="tournament-card" data-category="u9 open women" data-location="gurugram" data-month="june" data-year="2025">
+                    <div class="tournament-date">
+                        <span class="date-number">15-21</span>
+                        <span class="date-month">June</span>
+                    </div>
+                    <div class="tournament-details">
+                        <h3 class="tournament-name">38th National U-9 Open and Women Chess Championship</h3>
+                        <div class="tournament-info">
+                            <div class="info-item">
+                                <img src="assets/tournaments/icon_location.png" alt="Location" class="info-icon">
+                                <span>Gurugram</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="assets/tournaments/icon_calendar.png" alt="Calendar" class="info-icon">
+                                <span>June 15-21, 2025</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="assets/tournaments/icon_category.png" alt="Category" class="info-icon">
+                                <span>U-9 Open and Girls</span>
+                            </div>
+                        </div>
+                        <div class="tournament-actions">
+                            <div class="action-buttons">
+                                <a href="#" class="btn btn-primary">Register</a>
+                                <a href="#" class="btn btn-secondary">Details</a>
+                            </div>
+                            <div class="registration-status">
+                                <span class="status-badge">Registration Open</span>
+                                <span class="closing-date">Closes: June 14, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tournament Card 4 - May 17-18 -->
+                <div class="tournament-card" data-category="open" data-location="karnal" data-month="may" data-year="2025">
+                    <div class="tournament-date">
+                        <span class="date-number">17-18</span>
+                        <span class="date-month">May</span>
+                    </div>
+                    <div class="tournament-details">
+                        <h3 class="tournament-name">29th Haryana State Chess Championship</h3>
+                        <div class="tournament-info">
+                            <div class="info-item">
+                                <img src="assets/tournaments/icon_location.png" alt="Location" class="info-icon">
+                                <span>Faridabad</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="assets/tournaments/icon_calendar.png" alt="Calendar" class="info-icon">
+                                <span>May 17-18, 2025</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="assets/tournaments/icon_category.png" alt="Category" class="info-icon">
+                                <span>U-9 and U-15</span>
+                            </div>
+                        </div>
+                        <div class="tournament-actions">
+                            <div class="action-buttons">
+                                <a href="https://forms.gle/iAYnDfcCFwexdiiJ8" class="btn btn-primary" target="_blank">Register</a>
+                                <a href="https://drive.google.com/file/d/1OFOvqdndsPaqGReplZCnZkb0gg_6_i4I/view?usp=drive_link" class="btn btn-secondary" target="_blank">Details</a>
+                            </div>
+                            <div class="registration-status">
+                                <span class="status-badge">Registration Closed</span>
+                                <span class="closing-date">Closes: May 16, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tournament Card 5 - May 3-4 (Oldest) -->
+                <div class="tournament-card" data-category="u7 u13 u19" data-location="sonipat" data-month="may" data-year="2025">
+                    <div class="tournament-date">
+                        <span class="date-number">3-4</span>
+                        <span class="date-month">May</span>
+                    </div>
+                    <div class="tournament-details">
+                        <h3 class="tournament-name">29th Haryana State Chess Championship</h3>
+                        <div class="tournament-info">
+                            <div class="info-item">
+                                <img src="assets/tournaments/icon_location.png" alt="Location" class="info-icon">
+                                <span>Sonipat</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="assets/tournaments/icon_calendar.png" alt="Calendar" class="info-icon">
+                                <span>May 3-4, 2025</span>
+                            </div>
+                            <div class="info-item">
+                                <img src="assets/tournaments/icon_category.png" alt="Category" class="info-icon">
+                                <span>U-7, U-13 and U-19</span>
+                            </div>
+                        </div>
+                        <div class="tournament-actions">
+                            <div class="action-buttons">
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhzCHYYkBA91YXdaRPlB40U1KU5YbwU1q-wWWMiHCM6-J9sw/closedform" class="btn btn-primary" target="_blank">Register</a>
+                                <a href="https://drive.google.com/file/d/15DBPXBMdNMluh0JkgUrotnzbdH9yFZK7/view?usp=drive_link" class="btn btn-secondary" target="_blank">Details</a>
+                            </div>
+                            <div class="registration-status">
+                                <span class="status-badge">Registration Closed</span>
+                                <span class="closing-date">Closes: May 1, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="assets/home/logo_hca.png" alt="Haryana Chess Association Logo">
+                    <p>Promoting chess excellence across Haryana</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="tournaments.html">Tournament Calendar</a></li>
+                        <li><a href="affiliated.html">Affiliated Bodies</a></li>
+                        <li><a href="results.html">Results & Certificates</a></li>
+                        <li><a href="mission.html">HCA Mission</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 305/12, Chandra Bhawan, Jawahar Nagar (Jacubpura), Gurugram, 122001</p>
+                    <p><i class="fas fa-phone"></i> +91 9810205181</p>
+                    <p><i class="fas fa-envelope"></i> haryanachessassociation@gmail.com</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/HaryanaChessAssociationHca/" class="social-icon" target="_blank"><img src="assets/home/Icon_facebook.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/haryana_chess_association?igsh=MXJ0cWt6amFybW10NA==" class="social-icon" target="_blank"><img src="assets/home/Icon_instagram.png" alt="Instagram"></a>
+                        <a href="https://www.linkedin.com/" class="social-icon" target="_blank"><img src="assets/home/Icon_linkedin.png" alt="LinkedIn"></a>
+                        <a href="https://x.com/chess_haryana" class="social-icon" target="_blank"><img src="assets/home/icon_twitter.png" alt="Twitter"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-developers">
+            <div class="container">
+                <h3>Developers</h3>
+                <div class="developer-row">
+                    <div class="developer-item">
+                        <p class="developer-name">Yash Mittal</p>
+                        <p class="developer-email"><a href="mailto:yasshmittal3@gmail.com">yasshmittal3@gmail.com</a></p>
+                        <p class="developer-phone no.">+91 9911259836</p>
+                    </div>
+                    <div class="developer-item">
+                        <p class="developer-name">Sukriti Kashyap</p>
+                        <p class="developer-email"><a href="mailto:sukritikashyap0028@gmail.com">sukritikashyap0028@gmail.com</a></p>
+                        <p class="developer-phone no.">+91 83071 36089</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 Haryana Chess Association. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
