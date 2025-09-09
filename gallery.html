@@ -106,7 +106,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="results.html">Results & Certificates</a></li>
                             <li><a href="mission.html">HCA Mission</a></li>
-                            <li><a href="gallery.html" class="active">Gallery</a></li>
+                            <!--<li><a href="gallery.html" class="active">Gallery</a></li>-->
                             <li><a href="gallery.html">Gallery</a></li>
                         </ul>
                     </li>
@@ -284,6 +284,67 @@
                     <!--hehddiewdeopdee-->
                 </div>
             </section>
+
+            <!-- Events Hosted By Our Affiliated Units Section -->
+            <section class="gallery-section">
+                <div class="section-header">
+                    <h2>Events Hosted By Our Affiliated Units</h2>
+                </div>
+
+                <!-- Event 1: All Faridabad Chess Association -->
+                <div class="gallery-subsection">
+                    <div class="subsection-header">
+                        <h3>All Faridabad Chess Association</h3>
+                    </div>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="assets/gallery/e11.jpg" alt="All Faridabad Chess Association Event Image 1">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/gallery/e12.jpg" alt="All Faridabad Chess Association Event Image 2">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/gallery/e13.jpg" alt="All Faridabad Chess Association Event Image 3">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 2: Distt. Chess Association Gurgaon -->
+                <div class="gallery-subsection">
+                    <div class="subsection-header">
+                        <h3>Distt. Chess Association Gurgaon</h3>
+                    </div>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="assets/gallery/e21.jpg" alt="Distt. Chess Association Gurgaon Event Image 1">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/gallery/e22.jpg" alt="Distt. Chess Association Gurgaon Event Image 2">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/gallery/e23.jpg" alt="Distt. Chess Association Gurgaon Event Image 3">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 3: Distt. Chess Association Sonipat -->
+                <div class="gallery-subsection">
+                    <div class="subsection-header">
+                        <h3>Distt. Chess Association Sonipat</h3>
+                    </div>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="assets/gallery/e31.jpg" alt="Distt. Chess Association Sonipat Event Image 1">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/gallery/e32.jpg" alt="Distt. Chess Association Sonipat Event Image 2">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/gallery/e33.jpg" alt="Distt. Chess Association Sonipat Event Image 3">
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -348,47 +409,9 @@
         </div>
     </footer>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-    </div>
 
-    <script>
-        // Lightbox functionality
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const lightboxClose = document.querySelector('.lightbox-close');
-        const galleryImages = document.querySelectorAll('.gallery-item img');
 
-        // Add click event to all gallery images
-        galleryImages.forEach(img => {
-            img.addEventListener('click', function() {
-                lightbox.style.display = 'block';
-                lightboxImg.src = this.src;
-                lightboxImg.alt = this.alt;
-            });
-        });
 
-        // Close lightbox when clicking the close button
-        lightboxClose.addEventListener('click', function() {
-            lightbox.style.display = 'none';
-        });
-
-        // Close lightbox when clicking outside the image
-        lightbox.addEventListener('click', function(e) {
-            if (e.target === lightbox) {
-                lightbox.style.display = 'none';
-            }
-        });
-
-        // Close lightbox with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                lightbox.style.display = 'none';
-            }
-        });
-    </script>
 
     <script src="js/script.js"></script>
 </body>
