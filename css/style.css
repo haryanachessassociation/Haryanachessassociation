@@ -2266,25 +2266,9 @@ section {
 
 .banner-content {
     display: inline-block;
-}
-
-.banner-close {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 24px;
-    cursor: pointer;
-    line-height: 1;
-    padding: 5px;
-    transition: opacity 0.2s;
-}
-
-.banner-close:hover {
-    opacity: 0.7;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Modal Styles */
@@ -2376,15 +2360,27 @@ section {
     color: #9C4C15;
 }
 
-/* Responsive Banner */
+/* Responsive Banner Optimization */
 @media (max-width: 768px) {
     .notification-banner {
-        font-size: 13px;
-        padding: 12px 40px 12px 15px;
+        font-size: 16px; /* Keep it readable on tablets */
+        padding: 18px 20px; /* Increased height for mobile */
     }
     
     .modal-content {
         padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .notification-banner {
+        font-size: 15px; /* Slightly smaller for very small phones but still clear */
+        padding: 16px 15px;
+        line-height: 1.4;
+    }
+    
+    .banner-text {
+        display: block; /* Ensure it takes full width for wrapping */
     }
 }
 

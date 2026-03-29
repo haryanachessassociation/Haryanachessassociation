@@ -149,31 +149,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Job Notification Banner Logic
     const jobBanner = document.getElementById('job-banner');
-    const closeBannerBtn = document.getElementById('close-banner');
     const jobModal = document.getElementById('job-modal');
     const closeModalBtn = document.getElementById('close-modal');
 
     if (jobBanner) {
-        // Check if banner was previously closed (using localStorage for persistence as requested)
-        const isBannerClosed = localStorage.getItem('jobBannerClosed');
-        
-        if (!isBannerClosed) {
-            jobBanner.classList.add('show');
-            document.body.classList.add('has-active-banner');
-        }
-
-        // Close banner functionality
-        closeBannerBtn.addEventListener('click', function(e) {
-            e.stopPropagation(); // Prevent opening modal when clicking close button
-            jobBanner.style.opacity = '0';
-            jobBanner.style.transform = 'translateY(-100%)';
-            setTimeout(() => {
-                jobBanner.classList.remove('show');
-                document.body.classList.remove('has-active-banner');
-                // Store in localStorage to keep it hidden for the session/visit
-                localStorage.setItem('jobBannerClosed', 'true');
-            }, 400);
-        });
+        // Banner is now permanent (no close button as requested)
+        jobBanner.classList.add('show');
+        document.body.classList.add('has-active-banner');
 
         // Open modal functionality
         jobBanner.addEventListener('click', function() {
