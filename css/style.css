@@ -2208,25 +2208,60 @@ section {
 .notification-banner {
     background: linear-gradient(90deg, #9C4C15 0%, #d47a2b 100%);
     color: #ffffff;
-    padding: 10px 40px 10px 20px;
+    padding: 14px 45px 14px 20px; /* Increased height */
     text-align: center;
     position: relative;
     z-index: 1001;
-    font-size: 14px;
+    font-size: 16px; /* Increased text size */
     font-weight: 500;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, margin-top 0.3s ease-in-out;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s ease, margin-top 0.4s ease;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
     display: none; /* Hidden by default, shown via JS */
+}
+
+/* Entrance Animation: Fade-in + Slide-down */
+@keyframes bannerSlideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .notification-banner.show {
     display: block;
+    animation: bannerSlideDown 0.7s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* Hover Effect: Subtle color change and Underline Animation */
+.banner-text {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
 }
 
 .notification-banner:hover .banner-text {
-    text-decoration: underline;
-    opacity: 0.9;
+    color: #ffe0b2; /* Subtle light orange for hover */
+    text-decoration: none; /* Rely on custom underline */
+}
+
+.notification-banner:hover .banner-text::after {
+    width: 100%;
+}
+
+.banner-text::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ffe0b2;
+    transition: width 0.3s ease;
 }
 
 .banner-content {

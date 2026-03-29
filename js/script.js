@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.classList.remove('has-active-banner');
                 // Store in localStorage to keep it hidden for the session/visit
                 localStorage.setItem('jobBannerClosed', 'true');
-            }, 300);
+            }, 400);
         });
 
         // Open modal functionality
