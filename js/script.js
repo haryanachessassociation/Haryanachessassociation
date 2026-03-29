@@ -146,4 +146,65 @@ document.addEventListener('DOMContentLoaded', function() {
     if (yearFilter) {
         yearFilter.addEventListener('change', filterTournaments);
     }
+
+    // Job Notification Banner Logic
+    const jobBanner = document.getElementById('job-banner');
+    const closeBannerBtn = document.getElementById('close-banner');
+    const jobModal = document.getElementById('job-modal');
+    const closeModalBtn = document.getElementById('close-modal');
+
+    if (jobBanner) {
+        // Check if banner was previously closed (using localStorage for persistence as requested)
+        const isBannerClosed = localStorage.getItem('jobBannerClosed');
+        
+        if (!isBannerClosed) {
+            jobBanner.classList.add('show');
+            document.body.classList.add('has-active-banner');
+        }
+
+        // Close banner functionality
+        closeBannerBtn.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent opening modal when clicking close button
+            jobBanner.style.opacity = '0';
+            jobBanner.style.transform = 'translateY(-100%)';
+            setTimeout(() => {
+                jobBanner.classList.remove('show');
+                document.body.classList.remove('has-active-banner');
+                // Store in localStorage to keep it hidden for the session/visit
+                localStorage.setItem('jobBannerClosed', 'true');
+            }, 300);
+        });
+
+        // Open modal functionality
+        jobBanner.addEventListener('click', function() {
+            if (jobModal) {
+                jobModal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }
+        });
+    }
+
+    // Modal Close functionality
+    if (jobModal && closeModalBtn) {
+        const closeModal = () => {
+            jobModal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        };
+
+        closeModalBtn.addEventListener('click', closeModal);
+
+        // Close on clicking outside the modal content
+        jobModal.addEventListener('click', function(e) {
+            if (e.target === jobModal) {
+                closeModal();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && jobModal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
 });

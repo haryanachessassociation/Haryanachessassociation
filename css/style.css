@@ -2203,3 +2203,242 @@ section {
         font-size: 16px;
     }
 }
+
+/* Notification Banner */
+.notification-banner {
+    background: linear-gradient(90deg, #9C4C15 0%, #d47a2b 100%);
+    color: #ffffff;
+    padding: 10px 40px 10px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1001;
+    font-size: 14px;
+    font-weight: 500;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, margin-top 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: none; /* Hidden by default, shown via JS */
+}
+
+.notification-banner.show {
+    display: block;
+}
+
+.notification-banner:hover .banner-text {
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
+.banner-content {
+    display: inline-block;
+}
+
+.banner-close {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 5px;
+    transition: opacity 0.2s;
+}
+
+.banner-close:hover {
+    opacity: 0.7;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 95%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: modalFadeIn 0.4s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: #9C4C15;
+}
+
+.modal-header h2 {
+    color: #9C4C15;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modal-body p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.modal-body h3 {
+    margin: 20px 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.modal-body ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.modal-body li {
+    margin-bottom: 8px;
+    color: #555;
+    list-style-type: disc;
+}
+
+.modal-body strong {
+    color: #9C4C15;
+}
+
+/* Responsive Banner */
+@media (max-width: 768px) {
+    .notification-banner {
+        font-size: 13px;
+        padding: 12px 40px 12px 15px;
+    }
+    
+    .modal-content {
+        padding: 30px 20px;
+    }
+}
+
+/* Job Modal Content Styles */
+.modal-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-style: italic;
+    text-align: center;
+}
+
+.modal-divider {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 15px 0;
+}
+
+.intro-text {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.job-detail {
+    margin-bottom: 20px;
+    border-left: 3px solid #f4e0c9;
+    padding-left: 15px;
+}
+
+.detail-label {
+    display: block;
+    font-weight: 700;
+    color: #9C4C15;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.detail-value {
+    font-size: 15px;
+    color: #444;
+}
+
+.job-list {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.job-list li {
+    list-style-type: disc;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 14px;
+}
+
+.apply-link {
+    color: #9C4C15;
+    text-decoration: none;
+    border-bottom: 1px dashed #9C4C15;
+}
+
+.apply-link:hover {
+    color: #7a3b10;
+    border-bottom-style: solid;
+}
+
+.deadline {
+    margin-top: 10px;
+    color: #d32f2f;
+}
+
+.disclaimer {
+    color: #888;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.signature {
+    text-align: right;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    line-height: 1.4;
+}
+
+.signature strong {
+    color: #333;
+    font-size: 16px;
+}

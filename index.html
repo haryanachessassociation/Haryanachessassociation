@@ -88,7 +88,14 @@
   }
   </script>
 </head>
-<body>
+<body class="has-banner">
+    <!-- Job Notification Banner -->
+    <div id="job-banner" class="notification-banner">
+        <div class="banner-content">
+            <span class="banner-text">We’re hiring for a Part - Time Position – Click here to view details</span>
+        </div>
+        <button id="close-banner" class="banner-close" aria-label="Dismiss banner">&times;</button>
+    </div>
     <!-- Header / Navigation -->
     <header class="header header-white">
         <div class="container">
@@ -331,6 +338,83 @@
             </div>
         </div>
     </footer>
+
+    <!-- Job Description Modal -->
+    <div id="job-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-modal" class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <h2>The HARYANA CHESS ASSOCIATION</h2>
+                <p class="modal-subtitle">(Regd. & Affiliated to All India Chess Federation)</p>
+                <hr class="modal-divider">
+                <h3>ADVERTISEMENT FOR PART-TIME POSITION</h3>
+            </div>
+            <div class="modal-body">
+                <p class="intro-text">The Haryana Chess Association invites applications from eligible and motivated individuals for the following part-time position:</p>
+                
+                <div class="job-detail">
+                    <span class="detail-label">Position:</span>
+                    <p class="detail-value">Part-Time Office Assistant (Chess Activities & Operations)</p>
+                </div>
+
+                <div class="job-detail">
+                    <span class="detail-label">Number of Vacancies:</span>
+                    <p class="detail-value">1 (One)</p>
+                </div>
+
+                <div class="job-detail">
+                    <span class="detail-label">Nature of Work:</span>
+                    <p class="detail-value">The selected candidate will be responsible for assisting in the smooth management and coordination of the Association’s day-to-day activities including:</p>
+                    <ul class="job-list">
+                        <li>Coordinating chess tournaments, events, and training programs</li>
+                        <li>Managing correspondence (emails, letters, and communication with players, officials, and federations)</li>
+                        <li>Maintaining records of assets, players, documentation processes etc.</li>
+                    </ul>
+                </div>
+
+                <div class="job-detail">
+                    <span class="detail-label">Eligibility Criteria:</span>
+                    <ul class="job-list">
+                        <li>Graduate in any discipline (preference to candidates living in Gurugram)</li>
+                        <li>Good communication skills (Hindi & English)</li>
+                        <li>Basic computer proficiency (MS Office, email handling, internet usage)</li>
+                    </ul>
+                </div>
+
+                <div class="job-detail">
+                    <span class="detail-label">Job Type:</span>
+                    <p class="detail-value">Part-Time (Flexible hours, may require availability during tournaments/events)</p>
+                </div>
+
+                <div class="job-detail">
+                    <span class="detail-label">Remuneration:</span>
+                    <p class="detail-value">Negotiable, based on qualifications and experience</p>
+                </div>
+
+                <div class="job-detail">
+                    <span class="detail-label">Location:</span>
+                    <p class="detail-value">Gurugram, Haryana (may involve travel within the state during events)</p>
+                </div>
+
+                <div class="job-detail application-info">
+                    <span class="detail-label">How to Apply:</span>
+                    <p class="detail-value">Interested candidates may send their application along with a detailed resume to: <br>
+                    <a href="mailto:haryanachessassociation@gmail.com" class="apply-link"><strong>haryanachessassociation@gmail.com</strong></a></p>
+                    <p class="deadline"><strong>Last Date to Apply:</strong> 10-04-2026</p>
+                </div>
+
+                <div class="modal-footer-info">
+                    <p class="disclaimer"><small>Note: The Haryana Chess Association reserves the right to accept or reject any application without assigning any reason.</small></p>
+                    <div class="signature">
+                        <p><strong>V B Kashyap</strong><br>
+                        General Secretary<br>
+                        The Haryana Chess Association<br>
+                        305/12, Chandra Bhawan, Jawahar Nagar, GURUGRAM-122001</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
