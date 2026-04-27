@@ -2204,6 +2204,63 @@ section {
     }
 }
 
+/* WhatsApp Notification Banner */
+.wa-banner {
+    background: linear-gradient(90deg, #25D366 0%, #1da851 100%);
+    color: #ffffff;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1002;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.wa-banner-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.wa-banner-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.wa-banner-text i {
+    font-size: 18px;
+}
+
+.wa-btn {
+    background-color: #ffffff;
+    color: #25D366;
+    padding: 6px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.wa-btn:hover {
+    transform: scale(1.05); /* slightly scales */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    color: #1da851;
+}
+
+@media (max-width: 768px) {
+    .wa-banner-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 /* Notification Banner */
 .notification-banner {
     background: linear-gradient(90deg, #9C4C15 0%, #d47a2b 100%);
