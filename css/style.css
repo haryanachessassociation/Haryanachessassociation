@@ -2441,92 +2441,21 @@ section {
     }
 }
 
-/* Job Modal Content Styles */
-.modal-subtitle {
-    font-size: 14px;
-    color: #666;
-    margin-top: -10px;
-    margin-bottom: 10px;
-    font-style: italic;
+/* Notice Modal Content Styles */
+.notice-modal-content {
+    max-width: 900px;
+    width: 95%;
+    padding: 20px;
+}
+
+.notice-modal-body {
+    padding: 10px 0 0;
     text-align: center;
 }
 
-.modal-divider {
-    border: 0;
-    height: 1px;
-    background: #e0e0e0;
-    margin: 15px 0;
-}
-
-.intro-text {
-    font-weight: 500;
-    color: #333;
-    margin-bottom: 25px;
-}
-
-.job-detail {
-    margin-bottom: 20px;
-    border-left: 3px solid #f4e0c9;
-    padding-left: 15px;
-}
-
-.detail-label {
-    display: block;
-    font-weight: 700;
-    color: #9C4C15;
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    margin-bottom: 5px;
-}
-
-.detail-value {
-    font-size: 15px;
-    color: #444;
-}
-
-.job-list {
-    margin-top: 10px;
-    padding-left: 20px;
-}
-
-.job-list li {
-    list-style-type: disc;
-    margin-bottom: 8px;
-    color: #555;
-    font-size: 14px;
-}
-
-.apply-link {
-    color: #9C4C15;
-    text-decoration: none;
-    border-bottom: 1px dashed #9C4C15;
-}
-
-.apply-link:hover {
-    color: #7a3b10;
-    border-bottom-style: solid;
-}
-
-.deadline {
-    margin-top: 10px;
-    color: #d32f2f;
-}
-
-.disclaimer {
-    color: #888;
-    line-height: 1.4;
-    margin-bottom: 20px;
-}
-
-.signature {
-    text-align: left;
-    border-top: 1px solid #eee;
-    padding-top: 15px;
-    line-height: 1.4;
-}
-
-.signature strong {
-    color: #333;
-    font-size: 16px;
+.notice-doc-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }

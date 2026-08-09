@@ -147,46 +147,46 @@ document.addEventListener('DOMContentLoaded', function() {
         yearFilter.addEventListener('change', filterTournaments);
     }
 
-    // Job Notification Banner Logic
-    const jobBanner = document.getElementById('job-banner');
-    const jobModal = document.getElementById('job-modal');
+    // Notification Banner & Modal Logic
+    const noticeBanner = document.getElementById('notice-banner') || document.getElementById('job-banner');
+    const noticeModal = document.getElementById('notice-modal') || document.getElementById('job-modal');
     const closeModalBtn = document.getElementById('close-modal');
 
-    if (jobBanner) {
-        // Banner is now permanent (no close button as requested)
-        jobBanner.classList.add('show');
+    if (noticeBanner) {
+        noticeBanner.classList.add('show');
         document.body.classList.add('has-active-banner');
 
         // Open modal functionality
-        jobBanner.addEventListener('click', function() {
-            if (jobModal) {
-                jobModal.classList.add('active');
+        noticeBanner.addEventListener('click', function() {
+            if (noticeModal) {
+                noticeModal.classList.add('active');
                 document.body.style.overflow = 'hidden'; // Prevent background scrolling
             }
         });
     }
 
     // Modal Close functionality
-    if (jobModal && closeModalBtn) {
+    if (noticeModal && closeModalBtn) {
         const closeModal = () => {
-            jobModal.classList.remove('active');
+            noticeModal.classList.remove('active');
             document.body.style.overflow = ''; // Restore scrolling
         };
 
         closeModalBtn.addEventListener('click', closeModal);
 
         // Close on clicking outside the modal content
-        jobModal.addEventListener('click', function(e) {
-            if (e.target === jobModal) {
+        noticeModal.addEventListener('click', function(e) {
+            if (e.target === noticeModal) {
                 closeModal();
             }
         });
 
         // Close on Escape key
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && jobModal.classList.contains('active')) {
+            if (e.key === 'Escape' && noticeModal.classList.contains('active')) {
                 closeModal();
             }
         });
     }
+
 });
