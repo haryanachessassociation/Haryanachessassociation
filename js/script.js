@@ -158,6 +158,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Open modal functionality
         noticeBanner.addEventListener('click', function() {
+            if (noticeBanner.tagName === 'A') {
+                return;
+            }
             if (noticeModal) {
                 noticeModal.classList.add('active');
                 document.body.style.overflow = 'hidden'; // Prevent background scrolling
